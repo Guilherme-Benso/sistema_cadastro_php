@@ -1,6 +1,6 @@
 <?php
 //conectando no banco
-$pdo = new PDO("MySQL:dbname= test; host=127.0.0.1:3306","root","gui13101");
+$pdo = new PDO("MySQL:dbname= test; host=127.0.0.1:3306","seu-usuario","sua-senha");
 
 //criando uma tabela
 $sql = $pdo->query('CREATE TABLE personagens(
