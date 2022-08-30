@@ -13,3 +13,4 @@
     <input type="submit" value="Adicionar">
 
 </form>
+<button onclick="window.location.href = 'index.php'">Home</button>
