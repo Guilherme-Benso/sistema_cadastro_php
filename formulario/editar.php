@@ -42,4 +42,4 @@ else {
     <input type="submit" value="Editar">
 
 </form>
-<button onclick="window.location.href = 'index.php'">Home</button>
+<button onclick="window.location.href = 'index.php'">Home</button>      
