@@ -12,8 +12,7 @@ if ($id) {
     if ($sql->rowCount() > 0) {
         //puxando os dados da linha conforme o $sql fez a consulta baseado no $id
         $info = $sql->fetch(PDO::FETCH_ASSOC);
-
-    }else {
+    } else {
         header("Location:index.php");
         exit;
     }
@@ -23,23 +22,28 @@ else {
     header("Location:index.php");
     exit;
 }
-    
+
 ?>
 
 
 <h1>Editar usuário</h1>
 <form method="POST" action="editar_action.php">
+    <input type="hidden" name="id" value=<?= $info["id"]; ?>>
+    <!--
+        Um dos métodos de armazenamento momentâneo de dados numa tag HTML para ser usada 
+        posteriormente pelo PHP é usar a tag <input/> com atributos exemplo   
+        <input type="hidden" name="id" value=php $info["id"]; php>-->
     <label>
         Nome:
-        <input type="text" name="name" value=<?=$info["nome"]?>>
+        <input type=" text" name="name" value=<?= $info["nome"] ?>>
     </label>
     <br>
     <label>
         E-mail:
-        <input type="text" name="email" value=<?=$info["email"]?>>
+        <input type="text" name="email" value=<?= $info["email"] ?>>
     </label>
     <br><br>
     <input type="submit" value="Editar">
 
 </form>
-<button onclick="window.location.href = 'index.php'">Home</button>      
+<button onclick="window.location.href = 'index.php'">Home</button>
