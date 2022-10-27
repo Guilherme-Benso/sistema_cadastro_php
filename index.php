@@ -1,5 +1,5 @@
 <?php
-require "conector.php";
+include_once "./formulario/conector.php";
 require "../sistema_cadastro_php/formulario/dao/UsuarioDaoMySQL.php";
 $usuarioDao = new UsuarioDaoMySQL($pdo);
 $lista = $usuarioDao->findAll();
